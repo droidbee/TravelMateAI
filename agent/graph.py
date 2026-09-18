@@ -6,13 +6,13 @@ from langgraph.graph.state import StateGraph
 from langgraph.prebuilt import ToolNode, tools_condition
 from agent.prompts import TRAVEL_AGENT_SYSTEM_PROMPT
 from agent.state import TravelAgentState
-from llm.llm_client import create_llm_client
+from llm.llm_client import create_llm
 from tools.destination_tool import search_destinations
 
 
 tools = [search_destinations]
 
-llm = create_llm_client()
+llm = create_llm()
 llm_with_tools = llm.bind_tools(
         tools
     )
