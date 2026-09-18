@@ -6,9 +6,22 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-LLM_MODE = os.getenv("LLM_MODE", "local")
+def get_setting(name: str, default=None):
+    value = os.getenv(name)
 
-OLLAMA_API_KEY = os.getenv("OLLAMA_API_KEY")
+    if value is not None:
+        return value
+
+    try:
+        import streamlit as st
+        return st.secrets.get(name, default)
+    except Exception:
+        return default
+
+
+LLM_MODE = get_setting("LLM_MODE", "local")
+
+OLLAMA_API_KEY = get_setting("OLLAMA_API_KEY")
 
 LOCAL_OLLAMA_MODEL = "llama3.2:3b"
 CLOUD_OLLAMA_MODEL = "gpt-oss:20b"
