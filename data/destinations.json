@@ -1,0 +1,92 @@
+[
+    {
+      "name": "Amalfi Coast",
+      "country": "Italy",
+      "type": [
+        "coastal",
+        "scenic",
+        "relaxing"
+      ],
+      "best_for": [
+        "relaxation",
+        "scenery",
+        "couples"
+      ],
+      "description": "A spectacular Mediterranean coastline known for dramatic cliffs, colorful villages, beautiful sea views and a relaxed atmosphere."
+    },
+    {
+      "name": "Florence",
+      "country": "Italy",
+      "type": [
+        "historical",
+        "cultural",
+        "food"
+      ],
+      "best_for": [
+        "history",
+        "art",
+        "food"
+      ],
+      "description": "A historic Tuscan city famous for Renaissance art, architecture, museums and traditional Italian cuisine."
+    },
+    {
+      "name": "Lake Como",
+      "country": "Italy",
+      "type": [
+        "scenic",
+        "relaxing",
+        "lakeside"
+      ],
+      "best_for": [
+        "relaxation",
+        "scenery",
+        "luxury"
+      ],
+      "description": "A beautiful lakeside destination surrounded by mountains, elegant villages and spectacular landscapes."
+    },
+    {
+      "name": "Rome",
+      "country": "Italy",
+      "type": [
+        "historical",
+        "cultural",
+        "food"
+      ],
+      "best_for": [
+        "history",
+        "architecture",
+        "food"
+      ],
+      "description": "Italy's historic capital, known for ancient Roman landmarks, museums, architecture and Italian cuisine."
+    },
+    {
+      "name": "Barcelona",
+      "country": "Spain",
+      "type": [
+        "coastal",
+        "cultural",
+        "food"
+      ],
+      "best_for": [
+        "beaches",
+        "architecture",
+        "food"
+      ],
+      "description": "A vibrant Mediterranean city combining beaches, distinctive architecture, culture and excellent food."
+    },
+    {
+      "name": "Interlaken",
+      "country": "Switzerland",
+      "type": [
+        "mountains",
+        "scenic",
+        "adventure"
+      ],
+      "best_for": [
+        "nature",
+        "adventure",
+        "scenery"
+      ],
+      "description": "A scenic Swiss destination surrounded by mountains and lakes, popular for outdoor activities and spectacular views."
+    }
+  ]
