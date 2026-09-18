@@ -5,5 +5,5 @@ pydantic
 python-dotenv
 streamlit
 pytest
-langchain-
+langchain-ollama
 ollama
