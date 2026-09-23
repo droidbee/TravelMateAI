@@ -27,3 +27,7 @@ LOCAL_OLLAMA_MODEL = "llama3.2:3b"
 CLOUD_OLLAMA_MODEL = "gpt-oss:20b"
 
 OLLAMA_CLOUD_URL = "https://ollama.com"
+
+DUFFEL_API_URL = "https://api.duffel.com/air/offer_requests"
+
+DUFFEL_ACCESS_TOKEN = get_setting("DUFFEL_ACCESS_TOKEN")

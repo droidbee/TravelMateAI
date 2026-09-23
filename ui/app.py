@@ -26,6 +26,8 @@ st.caption("Your AI travel planning assistant")
 # Create conversation history for this browser session.
 if "messages" not in st.session_state:
     st.session_state.messages = []
+if "agent_messages" not in st.session_state:
+    st.session_state.agent_messages = []
 
 # Start a new conversation.
 with st.sidebar:
@@ -33,6 +35,7 @@ with st.sidebar:
 
     if st.button("➕ New conversation", use_container_width=True):
         st.session_state.messages = []
+        st.session_state.agent_messages = []
         st.rerun()
 
 
@@ -56,7 +59,12 @@ query = st.chat_input(
 if query:
     # Add and display the user's new message.
     user_message = HumanMessage(content=query)
+    
+    #UI History
     st.session_state.messages.append(user_message)
+    
+    #Agent History
+    st.session_state.agent_messages.append(user_message)
 
     with st.chat_message("user"):
         st.markdown(query)
@@ -68,7 +76,7 @@ if query:
 
             result = travel_agent.invoke(
                 {
-                    "messages": st.session_state.messages
+                    "messages": st.session_state.agent_messages
                 }
             )
 
@@ -76,6 +84,9 @@ if query:
 
             st.markdown(final_message.content)
 
+
+    #Store full graph messages
+    st.session_state.agent_messages = result["messages"];
 
     # Store only the final assistant response.
     st.session_state.messages.append(

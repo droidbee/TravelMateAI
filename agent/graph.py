@@ -8,9 +8,10 @@ from agent.prompts import TRAVEL_AGENT_SYSTEM_PROMPT
 from agent.state import TravelAgentState
 from llm.llm_client import create_llm
 from tools.destination_tool import search_destinations
+from tools.flight_tool import search_flights
 
 
-tools = [search_destinations]
+tools = [search_destinations, search_flights]
 
 llm = create_llm()
 llm_with_tools = llm.bind_tools(
