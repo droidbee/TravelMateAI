@@ -130,6 +130,15 @@ def search_flights(
                 "segments": flight_segments,
                 "price": offer["total_amount"],
                 "currency": offer["total_currency"],
+                 # Booking-related data
+                "expires_at": offer["expires_at"],
+                "passengers": [
+                    {
+                        "id": passenger["id"],
+                        "type": passenger["type"],
+                    }
+                    for passenger in offer["passengers"]
+                ],
             }
         )
 

@@ -31,3 +31,7 @@ OLLAMA_CLOUD_URL = "https://ollama.com"
 DUFFEL_API_URL = "https://api.duffel.com/air/offer_requests"
 
 DUFFEL_ACCESS_TOKEN = get_setting("DUFFEL_ACCESS_TOKEN")
+
+TAVILY_API_KEY = get_setting("TAVILY_API_KEY")
+
+TAVILY_API_URL = "https://api.tavily.com/search"
